@@ -23,7 +23,7 @@ public class Author {
             return false;
         }
         Author c2 = (Author) other;
-        return lastName.equals(c2.lastName);
+        return lastName.equals(c2.lastName) && firstName.equals(c2.firstName);
     }
     @Override
     public String toString() {

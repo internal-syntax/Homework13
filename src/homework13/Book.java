@@ -2,13 +2,13 @@ package homework13;
 
 public class Book {
     private final String bookName;
-    private final Author author;
+    private Author author;
     private int publicationYear;
 
     public Book(String bookName, Author author, int publicationYear) {
         this.bookName = bookName;
         this.publicationYear = publicationYear;
-        this.author = new Author(author.getFirstName(), author.getLastName());
+        this.author = author;
     }
 
     public String getBookName() {
@@ -33,7 +33,7 @@ public class Book {
             return false;
         }
         Book c2 = (Book) other;
-        return bookName.equals(c2.bookName);
+        return bookName.equals(c2.bookName) && author.equals(c2.author);
     }
 
     @Override
